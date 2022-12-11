@@ -96,3 +96,12 @@ LIKE 'b____y'
 
 -- % -> any number of characters
 -- _ _ two characters 
+
+-- Get the customers whose adresses contain Trail or Avenue and phone numbers end with 9
+SELECT *
+FROM customers
+WHERE address
+LIKE '%Avenue'
+OR 'Trail'
+AND phone
+LIKE '%9'
