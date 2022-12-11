@@ -25,3 +25,14 @@ SELECT name,
 unit_price,
 unit_price* 1.1 AS 'new price'
 FROM products;
+
+-- Comparision Operators
+
+SELECT *
+FROM customers
+WHERE state != "VA";
+
+SELECT *
+FROM customers
+WHERE birth_date > '1990-01-01';
+
