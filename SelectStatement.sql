@@ -42,14 +42,22 @@ SELECT *
 FROM orders
 WHERE order_date >= '2019-01-01'
 
--- AND Clause
+-- AND
 
 SELECT *
 FROM customers
 WHERE birth_date >= '1990-01-01' AND points > 1000
 
--- OR Clause
+-- OR
 
 SELECT *
 FROM customers
 WHERE birth_date >= '1990-01-01' OR points > 1000
+
+-- AND is executed before OR 
+
+-- NOT
+
+SELECT *
+FROM customers
+WHERE NOT (birth_date >= '1990-01-01' OR points > 1000)
