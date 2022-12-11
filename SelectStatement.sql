@@ -105,3 +105,9 @@ LIKE '%Avenue'
 OR 'Trail'
 AND phone
 LIKE '%9'
+
+-- NULL OPERATOR
+SELECT *
+FROM customers
+WHERE phone IS NOT NULL
+
