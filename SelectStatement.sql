@@ -73,3 +73,11 @@ WHERE state IN ('VA', 'FL', 'GA');
 SELECT *
 FROM customers
 WHERE points BETWEEN 1000 and 3000
+
+-- Return Customers born between 1/1/1990 and 1/1/2000
+
+SELECT *
+FROM customers
+WHERE birth_date
+BETWEEN '1990-01-01'
+AND '2000-01-01';
