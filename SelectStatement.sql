@@ -81,3 +81,9 @@ FROM customers
 WHERE birth_date
 BETWEEN '1990-01-01'
 AND '2000-01-01';
+
+-- Return Customers who have last name like 'B____'
+SELECT *
+FROM customers
+WHERE last_name
+LIKE 'b%'
