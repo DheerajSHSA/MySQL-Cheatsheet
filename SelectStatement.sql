@@ -61,3 +61,9 @@ WHERE birth_date >= '1990-01-01' OR points > 1000
 SELECT *
 FROM customers
 WHERE NOT (birth_date >= '1990-01-01' OR points > 1000)
+
+-- IN
+
+SELECT *
+FROM customers
+WHERE state IN ('VA', 'FL', 'GA');
