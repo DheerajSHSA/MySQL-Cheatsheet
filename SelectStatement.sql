@@ -15,3 +15,7 @@ SELECT *
 FROM customers
 WHERE customer_id = 1
 ORDER BY first_name;
+
+
+-- Fetch All the unique state's name from the customers table
+SELECT DISTINCT state from customers
