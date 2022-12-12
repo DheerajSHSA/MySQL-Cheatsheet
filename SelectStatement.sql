@@ -208,3 +208,18 @@ FROM customers c
 RIGHT JOIN orders o
 	ON c.customer_id = o.customer_id
 ORDER BY c.customer_id
+
+-- Excercise
+SELECT order_id,
+order_date,
+c.first_name,
+s.name AS "Shipper",
+os.name AS "STATUS"
+FROM orders o
+JOIN customers c
+	ON o.customer_id = c.customer_id
+LEFT JOIN shippers s
+	ON o.shipper_id = s.shipper_id
+JOIN order_statuses os
+	ON o.status = os.order_status_id
+ORDER BY order_id
