@@ -189,3 +189,22 @@ JOIN order_statuses os
 SELECT *
 FROM orders o, customers c
 WHERE o.customer_id = c.customer_id
+
+-- OUTER JOINS-LEFT
+-- Will return all the data from left table(customers table) even if the condition is not true
+SELECT c.customer_id,
+c.first_name,
+o.order_id
+FROM customers c
+LEFT JOIN orders o
+	ON c.customer_id = o.customer_id
+ORDER BY c.customer_id
+
+-- OUTER JOINS RIGHT
+SELECT c.customer_id,
+c.first_name,
+o.order_id
+FROM customers c
+RIGHT JOIN orders o
+	ON c.customer_id = o.customer_id
+ORDER BY c.customer_id
