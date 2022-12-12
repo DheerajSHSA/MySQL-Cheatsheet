@@ -117,3 +117,11 @@ SELECT *
 FROM orders
 WHERE shipped_date
 IS NULL
+
+-- Return all the orders with id = 2 , order by total price desc
+USE sql_store;
+SELECT *,
+quantity * unit_price AS 'Total Price'
+FROM order_items
+WHERE order_id = 2
+ORDER BY "Total Price" DESC;
