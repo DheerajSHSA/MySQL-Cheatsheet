@@ -125,3 +125,10 @@ quantity * unit_price AS 'Total Price'
 FROM order_items
 WHERE order_id = 2
 ORDER BY "Total Price" DESC;
+
+
+-- Return only 3 records
+SELECT *
+FROM customers
+LIMIT 3;
+
