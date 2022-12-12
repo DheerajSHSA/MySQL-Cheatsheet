@@ -146,3 +146,12 @@ last_name
 FROM orders
 JOIN customers 
 ON orders.customer_id = customers.customer_id
+
+-- Excercise
+SELECT oi.order_id,
+p.product_id,
+p.name,
+oi.quantity,
+p.unit_price
+FROM order_items oi
+JOIN products p ON oi.product_id = p.product_id;
