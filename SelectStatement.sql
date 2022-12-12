@@ -132,3 +132,8 @@ SELECT *
 FROM customers
 LIMIT 3;
 
+-- Return top 3 customers with highest points
+SELECT *
+FROM customers
+ORDER BY points DESC
+LIMIT 3;
